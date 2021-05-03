@@ -1,0 +1,21 @@
+<!-- <div>
+    <p>{{user.name}}</p>
+    <div class="d-flex">
+        <input type="text" class="form-control" placeholder="new name" #userInput>
+        <button class="btn btn-primary" (click)='eventEmitt(userInput.value)'> update</button>
+    </div>
+    
+</div> -->
+
+<div>
+    <li>
+        <p>{{user.name}}</p>
+        <div class="d-flex">
+            <input type="text" class="form-control" placeholder="new name" #inputData>
+            <button class="btn btn-primary ml-3"(click)="activeEmitter(inputData.value)" >updateName</button>
+        </div>
+        
+    </li>
+</div>
+
+

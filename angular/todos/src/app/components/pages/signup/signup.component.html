@@ -1,0 +1,79 @@
+<div class="card bg-dark" style="width: 25rem;margin:50px auto;">
+    <div class="card-title">
+        <h2 class="text-center mt-5" style="color: white;">signup</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col col-sm-12 mb-4">
+                <label for="name" class="h5" style="color: white;">userName</label>
+                <input type="text"
+                 class="form-control"
+                 id="name" 
+                 placeholder="enter your name"
+                 [(ngModel)]='name'
+                 >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-12 mb-4">
+                <label for="phone" class="h5" style="color: white;">phone</label>
+                <input type="text"
+                 class="form-control"
+                 id="phone" 
+                 placeholder="+xx xxxxxxxx"
+                 [(ngModel)]='phone'
+                 >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-12 mb-4">
+                <label for="email" class="h5" style="color: white;">Email</label>
+                <input type="email"
+                 class="form-control"
+                 id="email" 
+                 placeholder="name@example.com"
+                 [(ngModel)]='email'
+                 >
+            </div>
+        </div>
+       
+        <div class="row">
+            <div class="col col-sm-12 mb-4">
+                <label for="password" class="h5" style="color: white;">Password</label>
+                <input type='password'
+                 class="form-control"
+                 id="password" 
+                 placeholder="*********"
+                 [(ngModel)]='password'
+                 >
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col col-sm-12 mb-4">
+                <label for="address" class="h5" style="color: white;">Address</label>
+                <textarea 
+                class="form-control"
+                id="address"
+                placeholder="your address"
+                [(ngModel)]='address'
+                ></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-12 d-flex justify-content-center mt-3">
+               <button 
+                class="btn btn-primary "
+                style=" min-width: 140px;"
+                (click)="signup()">signUp</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-12 my-3  d-flex justify-content-center" >
+                <span class="mt-2" style="font-size:20px; color: white;">already have account?</span>
+               <a class="btn" style="font-size:20px;color:lightblue" routerLink="/login">login</a>
+            </div>
+        </div>
+    </div>
+  </div>
+

@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg  bg-dark">
+    <a class="navbar-brand h1" routerLink="/">ToDo Maneger</a>
+    <button class="navbar-toggler " style="border: 1px solid white;" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon " ></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end mr-5" id="navbarNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item active">
+          <a class="nav-link" style="color: white;" routerLink="/" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link btn"style="color: white;" tabindex="-1" routerLink="/login" *ngIf = "!isUserExsist();else other"  >login</a>
+          <ng-template #other>
+            <a class="nav-link btn" style="color: white;" (click)="signOut()"  tabindex="-1" >logout</a>
+          </ng-template>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn"style="color: white;" tabindex="-1" routerLink="/signup"   >signup</a>
+        
+        </li>
+      </ul>
+    </div>
+  </nav>

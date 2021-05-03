@@ -1,0 +1,27 @@
+
+<div class="card bg-light py-5" style="width: 25rem;margin:100px auto;">
+    <div class="card-body">
+        <div class="row">
+            <div class="col col-sm-12 mb-4">
+                <label for="title" class="h5 mb-4" >Todo Title</label>
+                <input type="text"
+                class="form-control"
+                id="title" 
+                placeholder="todo title"
+                [(ngModel)]='todo.title'
+                >
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col col-sm-12 mb-4">
+                <input type="checkbox"
+                class="form-check-input ml-1 mt-2 "
+                id="status" 
+                placeholder="todo status"
+                [(ngModel)]='todo.completed'>
+                <label for="status" class="h5 form-check-label ml-4 " >completed</label>
+            </div>
+        </div>
+        <button (click)=" updateState ? updateTodo() : creatTodo()" (click)="navigateToDashboard()" class="btn btn-success mt-3">{{updateState?'update':'creat'}}</button>
+    </div>
+</div>    

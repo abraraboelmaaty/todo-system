@@ -1,0 +1,4 @@
+<div class="card" style="width: 30rem; margin: 50px auto;">
+    <h2 class="d-flex justify-content-center my-3"> TODOS</h2>
+    <app-todo-list-item [showActions]="showActions" *ngFor = 'let todo of todos' [todo]='todo'></app-todo-list-item>
+</div>

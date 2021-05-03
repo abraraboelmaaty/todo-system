@@ -1,0 +1,24 @@
+
+
+<div class="card-body">
+    <hr class="mt-3 ">
+    <div class="row mt-5">
+        
+        <div class="col col-sm-7">
+            <h5>{{todo.title}}</h5>
+            <h6>{{todo.completed}}</h6>
+            
+        </div>
+       
+        <div class="col col-sm-2 "  >
+            <button *ngIf="showActions" (click)='navigateFormUpdate(todo._id)' class="btn btn-warning rounded-pill px-4 ">Edit</button>
+        </div>
+        <div class="col col-sm-3 " >
+            <button *ngIf="showActions" class="btn btn-danger rounded-pill px-4" (click)="deleteTodo()">Delet</button>
+        </div>
+        
+        
+        
+    </div>
+    
+</div>

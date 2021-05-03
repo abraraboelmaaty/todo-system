@@ -1,0 +1,29 @@
+
+<!-- ****************(*ngIf=":boolean;else tampletRefrance")****************** -->
+<p  *ngIf="show; else other">article works!</p>
+<ng-template #other>
+    <p>p is heddin click to show agin</p>
+</ng-template>
+<button (click)="show=!show">show/hidden</button>
+
+<!-- **********************[ngSwitch]="the variable that i switch on";(*ngSwitchCase='the value i want'),(*ngSwitchDefult)******************* -->
+<div class="my-5" [ngSwitch]="articleStatus">
+    <p *ngSwitchCase="'pinding'">article states is painding</p>
+    <p *ngSwitchCase="'active'">article status is active</p>
+    <p *ngSwitchCase="'remve'">article status is deleted</p>
+    <p *ngSwitchDefault>incorrect state</p>
+</div>
+
+<!-- *********(*ngFor)='let variable of (array var that i loop on)';(index as index) return array element index;(first as isfrist)return boolean,return compleat tag************* -->
+<h2>comments</h2>
+<ul>
+    <li 
+    *ngFor = "let comment of comments; index as index; first as isFirst; last as isLast; odd as isOdd; even as isEven"
+    [id]='comment.id'
+    [style.borderTop]='!isFirst?"1px solid red":""'
+    [style.color]="isEven? '#000':'#fff'"
+    [style.background]="isOdd? '#000':'#fff'"
+    >{{comment.content}} with index: {{index}} , is frist: {{isFirst}} and is last: {{isLast}}
+   
+</li>
+</ul>
